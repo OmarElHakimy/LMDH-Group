@@ -2,26 +2,104 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+@font-face {
+  font-family: 'Moret';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Moret Regular'), url('/fonts/Moret-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'MoretBook';
+  font-style: normal;
+  font-weight: 400;
+  src: local('MoretBook'), url('/fonts/Moret-Book.woff') format('woff');
+}
+@font-face {
+  font-family: 'Moret';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Moret Bold'), url('/fonts/Moret-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'transat';
+  font-style: 400;
+  font-weight: normal;
+  src: local('transat standard'), url('/fonts/transat-standard.woff') format('woff');
+}
+@font-face {
+  font-family: 'transat';
+  font-style: 500;
+  font-weight: normal;
+  src: local('transat medium'), url('/fonts/transat-medium.woff') format('woff');
+}
+@font-face {
+  font-family: 'transat';
+  font-style: normal;
+  font-weight: 700;
+  src: local('transat bold'), url('/fonts/transat-bold.woff') format('woff');
+}  
+
+.bg-1{
+  background-color: #E4DFD7;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.lines{
+  border-color: #707070;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.dot{
+  position: absolute;
+  right: 50% ;
+  transform: translateX(50%);
+  top: 50%; 
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px
+}
+.dotTop{
+  position: absolute;
+  top: -17px;
+  right: -24px;
+  width: 46px;
+  height: 46px
+}
+.dotRight{
+  position: absolute;
+  top: 50%; 
+  transform: translateY(-50%);
+  right: -24px;
+  width: 46px;
+  height: 46px
+}
+.dotLeft{
+  position: absolute;
+  top: 50%; 
+  transform: translateY(-50%);
+  left: -24px;
+  width: 46px;
+  height: 46px
+}
+.whiteDot{
+  position: absolute;
+  color: white;
+  left: -24px;
+  top: 50%; 
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px
+}
+
+.button{
+  position: absolute;
+}
+
+.txt-shadow{
+  background-color: #e4dfd7;
+  color: transparent;
+  text-shadow: 0px 3px 6px rgba(255,255,255,0.5);
+  background-clip: text;
+}
+p, h1, h2, h3, h4, h5, h6, button{
+  letter-spacing: 0.08em;
 }
